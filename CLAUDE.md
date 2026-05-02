@@ -28,6 +28,12 @@ Single-page React 18 + Vite app for tracking daily habits. Entirely client-side 
 - Plain CSS in `src/App.css` using BEM-ish class names (`app__header`, `card__label`, `tab--active`). No CSS modules or Tailwind.
 - IDs come from `crypto.randomUUID()` with a `Date.now()`-based fallback in `useHabits.js`.
 
+## Working rules
+
+- **Commit after every update.** After any change to the project, stage the affected files, commit with a clear message, and push to `origin/main` so the GitHub repo stays current as a rollback point. Stage specific files — don't `git add -A` (avoids accidentally committing local-only files like `.claude/settings.local.json`).
+- **Explain before changing.** Before editing files or running commands that modify state, say in one sentence what you're about to do and why.
+- **Ask before deleting.** Never delete a file (or run destructive ops like `rm`, `git rm`, `git reset --hard`, branch deletion, history rewrites) without explicit confirmation, even if it looks unused or generated.
+
 ## Platform note
 
 Primary dev environment is Windows + PowerShell. `npm` scripts work the same; just be aware that shell-piping examples written for bash may need PowerShell-equivalent syntax.
