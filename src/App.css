@@ -1,0 +1,303 @@
+.app {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 32px 20px 80px;
+}
+
+.app__header {
+  margin-bottom: 24px;
+}
+
+.app__title {
+  margin: 0 0 16px;
+  font-size: 1.8rem;
+  letter-spacing: -0.01em;
+}
+
+.tabs {
+  display: flex;
+  gap: 4px;
+  background: #1a1d24;
+  padding: 4px;
+  border-radius: 10px;
+  width: fit-content;
+}
+
+.tab {
+  background: transparent;
+  border: none;
+  color: #aaa;
+  padding: 8px 16px;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.tab:hover {
+  color: #fff;
+}
+
+.tab--active {
+  background: #2a2f3a;
+  color: #fff;
+}
+
+.habit-form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.habit-form__input {
+  flex: 1;
+  padding: 12px 14px;
+  background: #1a1d24;
+  border: 1px solid #2a2f3a;
+  border-radius: 10px;
+  color: #e6e6e6;
+  outline: none;
+}
+
+.habit-form__input:focus {
+  border-color: #4f8cff;
+}
+
+.habit-form__btn {
+  padding: 12px 20px;
+  background: #4f8cff;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.habit-form__btn:disabled {
+  background: #2a2f3a;
+  color: #777;
+  cursor: not-allowed;
+}
+
+.habit-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.habit {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #1a1d24;
+  border: 1px solid #2a2f3a;
+  border-radius: 12px;
+  padding: 14px 16px;
+}
+
+.habit--done {
+  border-color: #2c5b3f;
+  background: #16221b;
+}
+
+.habit__check {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  border: 2px solid #3a4150;
+  background: transparent;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.habit__check:hover {
+  border-color: #4f8cff;
+}
+
+.habit__check--on {
+  background: #2ecc71;
+  border-color: #2ecc71;
+}
+
+.habit__body {
+  flex: 1;
+  min-width: 0;
+}
+
+.habit__name {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.habit__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.habit__streak {
+  font-size: 0.85rem;
+  color: #9aa3b2;
+}
+
+.habit__week {
+  display: flex;
+  gap: 3px;
+}
+
+.habit__day {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  background: #2a2f3a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6rem;
+  color: #555;
+}
+
+.habit__day--on {
+  background: #2ecc71;
+  color: #0a2a16;
+}
+
+.habit__day-label {
+  pointer-events: none;
+}
+
+.habit__remove {
+  background: transparent;
+  border: none;
+  color: #666;
+  font-size: 1.4rem;
+  cursor: pointer;
+  padding: 4px 8px;
+  line-height: 1;
+}
+
+.habit__remove:hover {
+  color: #ff6b6b;
+}
+
+.empty {
+  background: #1a1d24;
+  border: 1px dashed #2a2f3a;
+  border-radius: 12px;
+  padding: 32px;
+  text-align: center;
+  color: #888;
+}
+
+.empty p {
+  margin: 0;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+}
+
+.card {
+  background: #1a1d24;
+  border: 1px solid #2a2f3a;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.card__label {
+  font-size: 0.8rem;
+  color: #9aa3b2;
+  margin-bottom: 6px;
+}
+
+.card__value {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.card__sub {
+  color: #9aa3b2;
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+
+.progress {
+  background: #1a1d24;
+  border: 1px solid #2a2f3a;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.progress__label {
+  font-size: 0.85rem;
+  color: #9aa3b2;
+  margin-bottom: 10px;
+}
+
+.progress__bar {
+  background: #2a2f3a;
+  border-radius: 999px;
+  height: 10px;
+  overflow: hidden;
+}
+
+.progress__fill {
+  background: #4f8cff;
+  height: 100%;
+  transition: width 0.25s ease;
+}
+
+.summary {
+  width: 100%;
+  border-collapse: collapse;
+  background: #1a1d24;
+  border: 1px solid #2a2f3a;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.summary th,
+.summary td {
+  padding: 12px 14px;
+  text-align: left;
+  border-bottom: 1px solid #2a2f3a;
+}
+
+.summary th {
+  background: #20242d;
+  font-size: 0.8rem;
+  color: #9aa3b2;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.summary tr:last-child td {
+  border-bottom: none;
+}
+
+.cell--done {
+  color: #2ecc71;
+  font-weight: 700;
+}
+
+.cell--pending {
+  color: #555;
+}
